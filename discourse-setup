@@ -129,12 +129,11 @@ check_docker() {
 
 check_and_install_docker() {
   if ! check_docker; then
-    echo Failed to find docker or docker.io on your PATH.
+    echo Neither docker nor docker.io is in your PATH.
     read -p "Enter to install Docker from https://get.docker.com/ or Ctrl+C to exit"
     curl https://get.docker.com/ | sh
 
     if ! check_docker; then
-      echo Still failed to find docker or docker.io on your PATH.
       echo Docker install failed. Quitting.
       exit
     fi
