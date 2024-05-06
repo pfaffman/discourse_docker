@@ -28,7 +28,7 @@ smtp_pass='smtp-pw'
 notification=''
 letsencrypt='le@myhost.com'
 maxmind=''
-$DIR/../discourse-setup --skip-connection-test --skip-rebuild <<EOF 
+$DIR/../discourse-setup --debug --skip-connection-test --skip-rebuild <<EOF 
 $hostname
 $developer
 $smtp_address
@@ -60,7 +60,7 @@ notification='somuser@otherhost.com'
 smtp_domain=otherhost.com # NOTE: script uses notification hostnme
 letsencrypt='le-new@myhost.com'
 maxmind='maxthisone'
-$DIR/../discourse-setup --skip-connection-test --skip-rebuild <<EOF 
+$DIR/../discourse-setup  --debug --skip-connection-test --skip-rebuild <<EOF 
 $hostname
 $developer
 $smtp_address
